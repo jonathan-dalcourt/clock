@@ -50,6 +50,7 @@ public class StopwatchFragment extends Fragment {
     private TextView textSeconds;
     private TextView textMilliseconds;
 
+    private LinearLayout lapHeaderLayout;
     private LinearLayout lapNumberLayout;
     private LinearLayout lapTimeLayout;
     private LinearLayout timeTotalLayout;
@@ -102,6 +103,7 @@ public class StopwatchFragment extends Fragment {
         /** creates all the necessary views */
         lapsScrollView = rootView.findViewById(R.id.laps);
 
+        lapHeaderLayout = rootView.findViewById(R.id.lap_headers);
         lapNumberLayout = rootView.findViewById(R.id.lap_number);
         lapTimeLayout = rootView.findViewById(R.id.time_lap);
         timeTotalLayout = rootView.findViewById(R.id.time_total);
@@ -178,6 +180,7 @@ public class StopwatchFragment extends Fragment {
                 startButton.setEnabled(true);
                 pauseButton.setEnabled(false);
                 lapButton.setEnabled(false);
+                break;
             default: Log.e(LOG_TAG, "unexpected event: " + event);
         }
     }
@@ -197,6 +200,7 @@ public class StopwatchFragment extends Fragment {
     private void startLap() {
         if (stopwatch != null) {
             lapsScrollView.setVisibility(View.VISIBLE);
+            lapHeaderLayout.setVisibility(View.VISIBLE);
             addCurrentLap();
             addLapTime();
             addTotalTime();
@@ -335,6 +339,7 @@ public class StopwatchFragment extends Fragment {
         }
 
         lapsScrollView.setVisibility(View.INVISIBLE);
+        lapHeaderLayout.setVisibility(View.INVISIBLE);
 
     }
 

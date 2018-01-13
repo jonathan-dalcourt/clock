@@ -80,6 +80,41 @@
             android:gravity="center"/>
     </RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/lap_headers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
+        android:visibility="invisible">
+
+        <TextView
+            style="@style/LapsHeader"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/lap_number"
+            android:gravity="start"/>
+
+        <TextView
+            style="@style/LapsHeader"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/time_lap"
+            android:gravity="center"/>
+
+        <TextView
+            style="@style/LapsHeader"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/time_total"
+            android:gravity="end"/>
+    </LinearLayout>
+
     <ScrollView
         android:id="@+id/laps"
         android:layout_width="match_parent"
@@ -91,47 +126,11 @@
         android:paddingRight="8dp"
         android:visibility="invisible">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="visible">
-
-            <LinearLayout
-                android:id="@+id/lap_headers"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    style="@style/LapsHeader"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lap_number"
-                    android:gravity="start"/>
-
-                <TextView
-                    style="@style/LapsHeader"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="@string/time_lap"
-                    android:gravity="center"/>
-
-                <TextView
-                    style="@style/LapsHeader"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="@string/time_total"
-                    android:gravity="end"/>
-            </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/lap_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_below="@+id/lap_headers"
                 android:baselineAligned="false">
 
                 <LinearLayout
@@ -159,8 +158,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-
-        </RelativeLayout>
 
     </ScrollView>
 

@@ -115,8 +115,8 @@ public class TimerFragment extends Fragment {
         clearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changeButtonState(ButtonEvent.CLEAR);
                 clearTimer();
+                changeButtonState(ButtonEvent.CLEAR);
             }
         });
 
@@ -130,19 +130,20 @@ public class TimerFragment extends Fragment {
         initButtonState();
     }
 
-    //
+    // sets or resets the buttons to their initial state
     private void initButtonState() {
-        if (!getEmpty()) {
-            clearButton.setEnabled(true);
-            startButton.setEnabled(true);
-        } else {
+        if (isEmpty()) {
             clearButton.setEnabled(false);
             startButton.setEnabled(false);
+        } else {
+            clearButton.setEnabled(true);
+            startButton.setEnabled(true);
         }
         resetButton.setEnabled(false);
     }
 
-    private boolean getEmpty() {
+    // returns true if all EditText views are empty
+    private boolean isEmpty() {
         return (editHours.getText().toString().equals("") && editMinutes.getText().toString().equals("")
                 && editSeconds.getText().toString().equals(""));
     }
@@ -164,19 +165,11 @@ public class TimerFragment extends Fragment {
                 clearButton.setEnabled(true);
                 break;
             case CLEAR:
-                resetButtonState();
+                initButtonState();
                 break;
             default: Log.e(LOG_TAG, "unexpected event: " + event);
         }
     }
-
-    // resets the buttons to their original state
-    public void resetButtonState() {
-        startButton.setEnabled(false);
-        resetButton.setEnabled(false);
-        clearButton.setEnabled(false);
-    }
-
 
     // begins the timer
     private void startTimer() {
@@ -279,7 +272,7 @@ public class TimerFragment extends Fragment {
         // sends a Toast and sets the Timer TextViews to "00"
         public void onFinish() {
             setTimeView(ZERO_TIME, ZERO_TIME, ZERO_TIME);
-            resetButtonState();
+            initButtonState();
             try {
                 Toast.makeText(getActivity(), R.string.timer_done, Toast.LENGTH_SHORT).show();
             } catch (NullPointerException e) {
