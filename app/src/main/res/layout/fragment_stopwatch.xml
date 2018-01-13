@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/minutes_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/seconds_timer"
+            android:layout_alignBottom="@+id/seconds_timer"
+            android:layout_toLeftOf="@+id/left_colon"
+            android:layout_toStartOf="@+id/left_colon"
+            android:gravity="center"
+            android:text="@string/hint_00"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/left_colon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/right_colon"
+            android:layout_alignBottom="@+id/right_colon"
+            android:layout_toLeftOf="@+id/seconds_timer"
+            android:layout_toStartOf="@+id/seconds_timer"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingLeft="4dp"
+            android:paddingStart="4dp"
+            android:paddingRight="0dp"
+            android:paddingEnd="0dp"
+            android:text="@string/colon"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/seconds_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/hint_00"
+            android:textSize="48sp"
+            android:paddingLeft="4dp"
+            android:paddingStart="4dp"
+            android:paddingRight="4dp"
+            android:paddingEnd="4dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/right_colon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/seconds_timer"
+            android:layout_toEndOf="@+id/seconds_timer"
+            android:paddingBottom="8dp"
+            android:paddingLeft="0dp"
+            android:paddingStart="0dp"
+            android:paddingRight="4dp"
+            android:paddingEnd="4dp"
+            android:gravity="center"
+            android:text="@string/period"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/milliseconds_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/right_colon"
+            android:layout_toEndOf="@+id/right_colon"
+            android:layout_alignBottom="@+id/seconds_timer"
+            android:text="@string/hint_0"
+            android:textSize="48sp"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/laps"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/lap_headers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/LapsHeader"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lap_number"
+                    android:gravity="start"/>
+
+                <TextView
+                    style="@style/LapsHeader"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time_lap"
+                    android:gravity="center"/>
+
+                <TextView
+                    style="@style/LapsHeader"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time_total"
+                    android:gravity="end"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lap_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/lap_headers"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:id="@+id/lap_number"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/time_lap"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/time_total"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/reset"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/reset"
+            android:enabled="false"/>
+
+        <Button
+            android:id="@+id/lap"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/lap"
+            android:enabled="false"/>
+
+        <Button
+            android:id="@+id/pause"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/pause"
+            android:enabled="false"/>
+
+        <Button
+            android:id="@+id/start"
+            style="@style/Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/start"/>
+    </LinearLayout>
+
+</LinearLayout>

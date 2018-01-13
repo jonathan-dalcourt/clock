@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Clock</string>
+
+    <!-- Tab Names -->
+    <string name="category_clock">Clock</string>
+    <string name="category_timer">Timer</string>
+    <string name="category_stopwatch">Stopwatch</string>
+    <string name="category_alarm">Alarm</string>
+
+    <!-- Hints -->
+    <string name="hint_0">0</string>
+    <string name="hint_00">00</string>
+
+    <!-- Timers -->
+    <string name="hours">H</string>
+    <string name="minutes">M</string>
+    <string name="seconds">S</string>
+
+    <!-- Stopwatch -->
+    <string name="lap_number">LAP #</string>
+    <string name="lap">Lap </string>
+    <string name="time_lap">THIS LAP</string>
+    <string name="time_total">TOTAL</string>
+
+    <!-- Buttons -->
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="reset">Reset</string>
+    <string name="clear">Clear</string>
+    <string name="switch_format">Switch to 12-Hour format</string>
+
+    <!-- Toasts -->
+    <string name="timer_done">Timer done!</string>
+    <string name="timer_empty">Please enter a time.</string>
+
+    <string name="colon">:</string>
+    <string name="period">.</string>
+</resources>
