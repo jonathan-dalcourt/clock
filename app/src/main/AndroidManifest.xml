@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jondal.clock">
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:allowBackup="true"
@@ -34,6 +35,7 @@
             android:name=".subactivities.StopwatchActivity"
             android:label="@string/category_stopwatch"
             android:parentActivityName=".MainActivity" />
+        <receiver android:name=".AlarmReceiver"/>
     </application>
 
 </manifest>

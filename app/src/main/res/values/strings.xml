@@ -22,16 +22,27 @@
     <string name="time_lap">THIS LAP</string>
     <string name="time_total">TOTAL</string>
 
+    <!-- Alarm -->
+    <string name="alarm_current">Current alarm set for:</string>
+    <string name="alarm_none">No alarm set</string>
+
     <!-- Buttons -->
     <string name="start">Start</string>
     <string name="pause">Pause</string>
     <string name="reset">Reset</string>
     <string name="clear">Clear</string>
     <string name="switch_format">Switch to 12-Hour format</string>
+    <string name="alarm_set">Set</string>
+    <string name="alarm_cancel_pick">Cancel</string>
+    <string name="alarm_create">Create Alarm</string>
+    <string name="alarm_cancel">Cancel Alarm</string>
 
     <!-- Toasts -->
     <string name="timer_done">Timer done!</string>
     <string name="timer_empty">Please enter a time.</string>
+    <string name="alarm_toast_set">Alarm set</string>
+    <string name="alarm_toast_cancel">Alarm cancelled</string>
+    <string name="alarm_toast_finished">ALARM!!!</string>
 
     <string name="colon">:</string>
     <string name="period">.</string>
