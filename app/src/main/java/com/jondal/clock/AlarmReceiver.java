@@ -10,15 +10,10 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Vibrator;
-import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.jondal.clock.fragments.AlarmFragment;
-import com.jondal.clock.subactivities.AlarmActivity;
 
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;

@@ -4,8 +4,6 @@ import android.text.InputFilter;
 import android.text.Spanned;
 import android.util.Log;
 
-import com.jondal.clock.fragments.TimerFragment;
-
 /**
  * Input Filter to prevent the user from entering second and minute values outside of 0 - 59
  */

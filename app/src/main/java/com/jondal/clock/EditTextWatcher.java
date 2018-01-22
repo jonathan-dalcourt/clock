@@ -4,9 +4,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.EditText;
-
-import com.jondal.clock.fragments.TimerFragment;
 
 /**
  * Monitors the text of the EditTexts

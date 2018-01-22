@@ -1,7 +1,6 @@
 package com.jondal.clock.fragments;
 
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Chronometer;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -19,10 +17,6 @@ import android.widget.TextView;
 import com.jondal.clock.ButtonEvent;
 import com.jondal.clock.R;
 
-import org.w3c.dom.Text;
-
-import java.util.Calendar;
-import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
